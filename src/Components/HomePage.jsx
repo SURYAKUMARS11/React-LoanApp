@@ -14,21 +14,13 @@ import {
   Chip
 } from '@mui/material';
 import {
-  Speed,
-  VerifiedUserOutlined,
-  AccountBalanceWalletOutlined,
   ArrowForward,
   TrendingUp,
-  Security,
   FlashOn,
-  Stars,
   FormatQuote,
   AssignmentOutlined,
   FactCheckOutlined,
-  DirectionsCarFilledOutlined,
-  CheckCircleRounded,
-  HeadsetMic,
-  Email
+  DirectionsCarFilledOutlined
 } from '@mui/icons-material';
 
 import AdminNavbar from '../AdminComponents/AdminNavbar';

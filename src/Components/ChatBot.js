@@ -185,9 +185,7 @@ const ChatBot = ({ userRole }) => {
 const styles = {
     backdrop: {
         position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-        backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 999, backdropFilter: 'blur(3px)',
-        zIndex: 9998,
-        backdropFilter: 'blur(3px)'
+        backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 9998, backdropFilter: 'blur(3px)'
     },
     fab: {
         position: 'fixed', bottom: '30px', right: '30px', width: '65px', height: '65px',
@@ -195,15 +193,11 @@ const styles = {
         alignItems: 'center', cursor: 'pointer', boxShadow: '0 6px 16px rgba(0,123,255,0.4)',
         zIndex: 9999,
     },
-    fabTooltip: {
-        position: 'absolute', left: '-100px', backgroundColor: '#333', color: 'white',
-        padding: '5px 12px', borderRadius: '8px', fontSize: '12px', fontWeight: '500'
-    },
     chatWindow: {
         position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
         width: '650px', maxWidth: '95vw', height: '600px', maxHeight: '85vh',
         backgroundColor: '#fff', borderRadius: '24px', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)',
-        display: 'flex', flexDirection: 'column', overflow: 'hidden', zIndex: 1000,
+        display: 'flex', flexDirection: 'column', overflow: 'hidden',
         animation: 'fadeInScale 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
         zIndex: 9999,
     },

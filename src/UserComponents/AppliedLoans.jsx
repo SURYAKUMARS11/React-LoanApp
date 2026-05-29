@@ -69,7 +69,7 @@ const AppliedLoans = () => {
     } else {
       setLoading(false);
     }
-  }, [userId]);
+  }, [userId, fetchUserLoans]);
 
   const fetchUserLoans = async () => {
     try {
