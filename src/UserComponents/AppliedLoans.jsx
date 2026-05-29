@@ -63,13 +63,14 @@ const AppliedLoans = () => {
   const userId = localStorage.getItem('userId');
   const token = localStorage.getItem('token');
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (process.env.NODE_ENV !== 'test' && userId) {
       fetchUserLoans();
     } else {
       setLoading(false);
     }
-  }, [userId, fetchUserLoans]);
+  }, [userId]);
 
   const fetchUserLoans = async () => {
     try {

@@ -11,7 +11,8 @@ import {
   Button, 
   InputAdornment, 
   IconButton, 
-  CircularProgress
+  CircularProgress,
+  Typography
 } from '@mui/material';
 import { 
   EmailOutlined, 
