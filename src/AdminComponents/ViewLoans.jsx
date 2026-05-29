@@ -40,8 +40,6 @@ import {
   EditOutlined,
   DeleteOutline,
   AttachMoney,
-  Percent,
-  DescriptionOutlined,
   DirectionsCarOutlined,
   ErrorOutline,
   TrendingUp

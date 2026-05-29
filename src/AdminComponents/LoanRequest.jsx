@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { API_BASE_URL } from '../apiConfig';
 import AdminNavbar from './AdminNavbar';
 import Toast from '../Components/Toast';
@@ -21,7 +21,6 @@ import {
   TablePagination,
   TextField,
   InputAdornment,
-  Button,
   Chip,
   Skeleton,
   Stack,
@@ -39,12 +38,10 @@ import {
 } from '@mui/material';
 import {
   Search,
-  FilterList,
   VisibilityOutlined,
   CheckCircleOutline,
   HighlightOff,
   CalendarToday,
-  AttachMoney,
   Close,
   ImageOutlined,
   HomeWorkOutlined

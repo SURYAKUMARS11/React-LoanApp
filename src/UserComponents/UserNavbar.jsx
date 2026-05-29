@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import { motion, AnimatePresence } from 'framer-motion';
 import { API_BASE_URL } from '../apiConfig';
 
 // Material UI Imports
@@ -18,8 +17,7 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-  CircularProgress,
-  Tooltip
+  CircularProgress
 } from '@mui/material';
 import {
   DirectionsCarFilled,
@@ -27,9 +25,7 @@ import {
   DirectionsCarOutlined,
   PlaylistAddCheckOutlined,
   LogoutOutlined,
-  AccountCircleOutlined,
-  DarkModeOutlined,
-  LightModeOutlined
+  AccountCircleOutlined
 } from '@mui/icons-material';
 
 const UserNavbar = () => {
@@ -37,7 +33,7 @@ const UserNavbar = () => {
   const location = useLocation();
   
   // Theme State
-  const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark');
+  const [isDark] = useState(() => localStorage.getItem('theme') === 'dark');
   const [showConfirm, setShowConfirm] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
 
@@ -53,7 +49,6 @@ const UserNavbar = () => {
   }, [isDark]);
 
   const username = localStorage.getItem('username') || 'User';
-  const role = localStorage.getItem('role') || 'user';
 
   const confirmLogout = async () => {
     setIsLoggingOut(true);
@@ -126,32 +121,6 @@ const UserNavbar = () => {
 
           <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 1, md: 2 } }}>
             
-            {/* --- THEME TOGGLE BUTTON --- */}
-            {/* <Tooltip title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}>
-              <IconButton 
-                onClick={() => setIsDark(!isDark)}
-                sx={{ 
-                  color: isDark ? '#fbbf24' : '#94a3b8',
-                  bgcolor: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' }
-                }}
-              >
-                <AnimatePresence mode="wait" initial={false}>
-                  <motion.div
-                    key={isDark ? 'dark' : 'light'}
-                    initial={{ y: -10, opacity: 0, rotate: -45 }}
-                    animate={{ y: 0, opacity: 1, rotate: 0 }}
-                    exit={{ y: 10, opacity: 0, rotate: 45 }}
-                    transition={{ duration: 0.2 }}
-                    style={{ display: 'flex' }}
-                  >
-                    {isDark ? <LightModeOutlined /> : <DarkModeOutlined />}
-                  </motion.div>
-                </AnimatePresence>
-              </IconButton>
-            </Tooltip> */}
-
             <Chip
               avatar={<Avatar sx={{ bgcolor: '#1e293b !important' }}><AccountCircleOutlined sx={{ color: '#60a5fa' }} /></Avatar>}
               label={`${username}`}

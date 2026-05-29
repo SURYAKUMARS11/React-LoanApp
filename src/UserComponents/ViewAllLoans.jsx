@@ -33,10 +33,6 @@ import {
 import {
   Search,
   AccountBalanceOutlined,
-  ArrowForwardIos,
-  TrendingUp,
-  MonetizationOnOutlined,
-  FilterList,
   Clear
 } from '@mui/icons-material';
 

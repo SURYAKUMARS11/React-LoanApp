@@ -20,8 +20,7 @@ import {
   DialogContent,
   DialogActions,
   CircularProgress,
-  Tooltip,
-  Stack
+  Tooltip
 } from '@mui/material';
 import {
   AdminPanelSettings,
